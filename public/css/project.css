@@ -86,6 +86,16 @@ h4 {
 
 /* Lecture page stuff */
 
-.example p {
+.example {
     text-align: center;
+}
+.example h2 {
+    font-size: 35px;
+}
+.example h3 {
+    font-size: 30px;
+}
+
+.example .titles {
+    line-height: 5px;
 }
