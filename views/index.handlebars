@@ -2,6 +2,7 @@
 <head>
 	<title>Home Page</title>
 	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,21 +23,8 @@
 
 <body>
 	<div class="searchbar">
-
-	</div>
-	
-	<div class="taskbox">
-		<h2>To-Do:</h2>
-		<div class="tasks">
-			<div class="task">
-				<input type="checkbox" name="task1">
-				<label for="task1"> watch COGS 120 lecture </label><br>
-			</div>
-			<div class="task">
-				<input type="checkbox" name="task2">
-				<label for="task2"> take CSE 105 quiz </label><br>
-			</div>
-		</div>
+		<input type="text" placeholder="Search meeting ID..." class="search">
+		<button type="submit"><i class="fa fa-search"></i></button>
 	</div>
 
 	<br>
@@ -44,18 +32,48 @@
 	<div class="section">
 		<h3>Ongoing Meetings:</h3>
 		<p id="idk">¯\_(ツ)_/¯</p>
-		<p>You currently have no ongoing meetings.</p>
+		<p id="idktxt">You currently have no ongoing meetings.</p>
 	</div>
 
+	<br>
+	
+	<div class="taskbox">
+		<h2>To-Do:</h2>
+		<div class="tasks">
+			<div class="task">
+				<input type="checkbox" name="task1">
+				<label for="task1"> watch CSE 105 lecture </label><br>
+			</div>
+			<!--
+			<div class="task">
+				<input type="checkbox" name="task2">
+				<label for="task2"> take CSE 105 quiz </label><br>
+			</div>
+			-->
+		</div>
+	</div>
+	
 	<br>
 
 	<div class="section">
 		<h3>My Courses:</h3>
-		<p>COGS 120</p>
-		<p>CSE 105</p>
-		<p>MATH 20D</p>
+		<div class="course">
+			<h4>COGS 120/CSE 170</h4>
+			<p>Interaction Design</p>
+		</div>
+
+		<div class="course">
+			<h4>CSE 105</h4>
+			<p>Theory of Computation</p>
+		</div>
+
+		<div class="course">
+			<h4>MATH 20D</h4>
+			<p>Introduction to Differential Equations</p>
+		</div>
 	</div>
 
+	<br>
 
 </body>
 </html>
