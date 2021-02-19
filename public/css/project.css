@@ -1,8 +1,57 @@
-.example p {
-    color: #FF0000;
+/* General stuff */
+* {
+    filter: grayscale(1);   /* delete this line later */ 
+    font-family: 'Nunito', 'sans-serif';
+}
+p { 
+    font-size: 20px;
+}
+h3 {
+    font-size: 30px;
 }
 
-.taskbox p {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+/* Home page stuff */
+
+.taskbox {
+    background-color: #D8DCC8;
+    width: 30%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 25px;
+}
+.taskbox h3 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 1%;
+}
+.task {
     font-size: 20px;
+    font-weight: normal;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+.section h3 {
+    margin-left: 10%;
+}
+.section p {
+    text-align: center;
+    padding: 0px;
+    font-size: 15px;
+}
+
+#idk {
+    color: #8DAF12;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* soooo right now the css for both pages is in here 
+   but we can split it up later too */
+
+/* Lecture page stuff */
+
+.example p {
+    text-align: center;
 }
