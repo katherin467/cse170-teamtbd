@@ -38,7 +38,7 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', index.view);
-app.get('/lecture', lecture.view); // Lecture route
+app.get('/lecture/:id', lecture.view); // Lecture route
 app.get('/classes/:id', classes.view); // Classes route
 app.get('/quiz', quiz.view); // Quiz route
 
