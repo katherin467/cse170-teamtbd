@@ -1,0 +1,32 @@
+{
+    "classes":
+    [
+        {
+            "id": 1,
+            "course": "COGS 120/CSE 170",
+            "title": "Interaction Design",
+            "tasks": []
+        },
+        {
+            "id": 2,
+            "course": "CSE 105",
+            "title": "Theory of Computation",
+            "tasks": [
+                {
+                    "task": "watch lecture on Turing Machines",
+                    "url": "/lecture"
+                },
+                {
+                    "task": "take Turing Machine quiz",
+                    "url": "/quiz"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "course": "MATH 20D",
+            "title": "Introduction to Differential Equations",
+            "tasks": []
+        }
+    ]
+}

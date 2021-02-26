@@ -40,16 +40,19 @@
 	<div class="taskbox">
 		<h2>To-Do:</h2>
 		<div class="tasks">
-			<div class="task">
-				<input type="checkbox" name="task1">
-				<label for="task1"><a href="/lecture">watch CSE 105 lecture</a></label><br>
+			{{#each classes}} 
+			<div class="taskclass">
+				<h4>{{course}}</h4>
+				{{#each tasks}}
+				<div class="task">
+					<input type="checkbox" name="task1">
+					<label for="task1"><a href={{url}}>{{task}}</a></label><br>
+				</div>
+				{{else}}
+				<p style="font-style:italic;text-align:center;">No current tasks</p>
+				{{/each}}
 			</div>
-			<!--
-			<div class="task">
-				<input type="checkbox" name="task2">
-				<label for="task2"> take CSE 105 quiz </label><br>
-			</div>
-			-->
+			{{/each}}
 		</div>
 	</div>
 	
@@ -57,20 +60,12 @@
 
 	<div class="section">
 		<h3>My Courses:</h3>
-		<div class="course">
-			<h4><a href="/classes">COGS 120/CSE 170</a></h4>
-			<p>Interaction Design</p>
-		</div>
-
-		<div class="course">
-			<h4><a href="/classes">CSE 105</a></h4>
-			<p>Theory of Computation</p>
-		</div>
-
-		<div class="course">
-			<h4><a href="/classes">MATH 20D</a></h4>
-			<p>Introduction to Differential Equations</p>
-		</div>
+		{{#each classes}}
+			<div class="course" id="{{id}}">
+				<h4><a href="/classes/{{id}}">{{course}}</a></h4>
+				<p>{{title}}</p>
+			</div>
+		{{/each}}
 	</div>
 
 	<br>
