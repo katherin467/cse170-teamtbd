@@ -1,0 +1,38 @@
+* {
+    filter: grayscale(1);   /* delete this line later */ 
+    font-family: 'Nunito', 'sans-serif';
+}
+p { 
+    font-size: 14px;
+}
+h3 {
+    font-size: 30px;
+}
+h4 {
+    font-size: 20px;
+}
+
+.appname {
+    text-align: center;
+    padding-top: 30%;
+    font-size: 35px;
+}
+.input {
+    padding-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+.loginbtn {
+    text-align: center;
+    font-size: 20px;
+}
+.searchbar button {
+    cursor: pointer;
+    font-size: 15px;
+    border: none;
+    padding: 8px;
+    background: #ddd; 
+}
+.searchbar button:hover {
+    background: #ccc;
+}
