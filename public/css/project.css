@@ -104,3 +104,8 @@ h4 {
 .example .titles {
     line-height: 5px;
 }
+
+.example iframe {
+    width: 100% !important;
+    height: auto !important;
+}
