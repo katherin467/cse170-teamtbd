@@ -16,6 +16,20 @@
 	<script src="/js/bootstrap.min.js"></script>
 	<script src="/js/project.js"></script>
 
+	<!--video stuff coz i dont know where to put it anymore -->
+	<script>
+		var vid = document.getElementById("lectureVid");
+		console.log(vid);
+
+		function getCurTime() { 
+			alert(vid.currentTime);
+		} 
+
+		function setCurTime() { 
+			vid.currentTime=5;
+		} 
+	</script> 
+
 	<!-- where we would put google analytics -->
 
 </head>
@@ -24,16 +38,28 @@
 	<div class="example">
 		<h2 style="text-align: left;">CSE 105: Theory Of Computation</h2>
 		<!--video embed -->
-		<iframe width="75%" height="50%" src="https://www.youtube.com/embed/gJQTFhkhwPA" 
-		frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<div id="lectureVid"></div>
+		<iframe src="https://www.youtube.com/embed/gJQTFhkhwPA" 
+		frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+		</iframe>
 		
 		<div class="buttons" style="margin-top: 10px;">
-			<button>Comment</button> <button>Question</button>
+			<button onclick="getCurTime()" id="timestamp" type="button">Mark Time</button> <button>Question</button>
 		</div>
 
 		<div class="titles">
-			<h3 style="line-height: 20px;">Wk 5 Thurs: Turing Machines</h3>
-			<p style="margin-bottom: 20px;">On today's lecture, we will be introducting Turing Machines and their functionality.</p>
+			<h3 style="line-height: 25px;">Wk 5 Thurs: Turing Machines</h3>
+			<p style="margin-bottom: 20px; line-height:25px;">On today's lecture, we will be introducting Turing Machines and their functionality.</p>
+			<!-- fill in section with time stamps -->
+			<!-- so like, when button is clicked then timestamp show up on this section -->
+			<hr>
+			<h3>Timestamp Notes</h3>
+			<hr>
+			<!--how do i do this lmao-->
+
+
+
+			<!-- static stuff -->
 			<hr>
 			<h3>Transcript</h3>
 			<hr>
