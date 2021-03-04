@@ -16,6 +16,10 @@ function initializePage() {
 	});
 }
 
+
+
+//================= FUNCTIONS OF VIDEO LECTURE =================
+
 // 2. This code loads the IFrame Player API code asynchronously.
 var tag = document.createElement('script');
 
@@ -51,7 +55,17 @@ function onPlayerStateChange(event) {
   }
 }
 
-window.onclick = () => {
-	console.log(player);
-	alert(player.playerInfo.currentTime);
+function getCurTime() {
+	//right now its an alert but it should give it to timestamps
+	var timestamp = player.playerInfo.currentTime;
+	$("#example #ts").append("<p>" + timestamp + "</p>");
+	console.log("clicked on " + timestamp);
+}
+
+
+function setCurTime(time) {
+	preventDefault(e);
+	loadVideoById({'videoId': 'gJQTFhkhwPA',
+               'startSeconds': time
+				});
 }
