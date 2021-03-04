@@ -11,22 +11,47 @@ $(document).ready(function() {
 function initializePage() {
 	// probably don't need anything yet
     console.log("boom baby");
+	$.getScript("https://www.youtube.com/iframe_api", function() {
+		onYouTubeIframeAPIReady();
+	});
 }
 
-/*
-//lecture page feature: collect timestamp
-var vid = document.getElementById("lectureVid");
-vid.addEventListener("timeupdate", getCurTime);
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement('script');
 
-//get
-function getCurTime() { 
-	//change alert setting to fill into the list
-	console.log(vid.currentTime);
-} 
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-//set
-function setCurTime() { 
-  	//currently set to 5 seconds everytime
-  	vid.currentTime=5;
-} 
-*/
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var player;
+
+function onYouTubeIframeAPIReady() {
+	window.YT.ready(function () {
+	player = new YT.Player('player', {
+	height: '390',
+	width: '640',
+	videoId: 'gJQTFhkhwPA',
+	events: {
+		'onReady': onPlayerReady,
+		'onStateChange': onPlayerStateChange
+	}
+	});	
+});
+
+// 4. The API will call this function when the video player is ready.
+function onPlayerReady(event) {
+	event.target.playVideo();
+}
+
+function onPlayerStateChange(event) {
+    var videoStatuses = Object.entries(window.YT.PlayerState)
+    console.log(videoStatuses.find(status => status[1] === event.data)[0])
+  }
+}
+
+window.onclick = () => {
+	console.log(player);
+	alert(player.playerInfo.currentTime);
+}
