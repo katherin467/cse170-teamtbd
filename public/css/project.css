@@ -1,6 +1,6 @@
 /* General stuff */
 * {
-    filter: grayscale(1);   /* delete this line later */ 
+    /*filter: grayscale(1);   delete this line later */ 
     font-family: 'Nunito', 'sans-serif';
 }
 p { 
@@ -11,6 +11,12 @@ h3 {
 }
 h4 {
     font-size: 20px;
+}
+a {
+    color: blue;
+}
+a.backarrow, a.logout {
+    color: black;
 }
 
 /* Home page stuff */
@@ -68,6 +74,8 @@ h4 {
 #idk {
     color: #8DAF12;
     text-align: center;
+    margin-bottom: 0px;
+    margin-top: 0px;
     font-size: 40px;
     font-weight: bold;
 }

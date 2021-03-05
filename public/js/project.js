@@ -14,8 +14,19 @@ function initializePage() {
 	$.getScript("https://www.youtube.com/iframe_api", function() {
 		onYouTubeIframeAPIReady();
 	});
+	$('.loginbtn').click(verifyLogin);
 }
 
+function verifyLogin(e) {
+	e.preventDefault();
+	var username = document.getElementById("username").value;
+	var password = document.getElementById("password").value;
+	if (username == "testUser" && password == "testPass") {
+		window.location += "home";
+	} else {
+		alert("Invalid login!")
+	}
+}
 
 
 //================= FUNCTIONS OF VIDEO LECTURE =================
