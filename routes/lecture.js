@@ -1,5 +1,6 @@
 var classes = require("../classdata.json")['classes'];
 
+
 exports.view = function(req, res) {
     var lectureID = req.params.id; // turing-machines
     var lecture = getLectureData(lectureID);

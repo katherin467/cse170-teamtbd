@@ -117,3 +117,32 @@ a.backarrow, a.logout {
     width: 100% !important;
     height: auto !important;
 }
+
+.example table {
+    margin:auto;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 75%;
+    text-align: center;
+  }
+  
+.example  th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+.example  td {
+    border: 1px solid #dddddd;
+    text-align: right;
+    padding: 8px;
+  }
+  
+.example  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+.example #note {
+    width: 100%;
+}
+
