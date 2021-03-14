@@ -1,4 +1,4 @@
-'use strict';
+var classes = require("../../classdata.json")['classes'];
 
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
@@ -15,6 +15,7 @@ function initializePage() {
 		onYouTubeIframeAPIReady();
 	});
 	$('.loginbtn').click(verifyLogin);
+	$('.addClassBtn').click(addClass);
 }
 
 function verifyLogin(e) {
@@ -28,6 +29,22 @@ function verifyLogin(e) {
 	}
 }
 
+function addClass(e) {
+	var coursename = document.getElementById("className").value;
+	var coursedes = document.getElementById("classDes").value;
+	var newClass = {
+		'id': length(classes),
+		'course': coursename,
+		'title': coursedes,
+		'tasks': []
+	}
+	classes.push(newClass)
+	console.log(newClass)
+}
+
+function togglePopup(){
+  document.getElementById("popup-1").classList.toggle("active");
+}
 
 //================= FUNCTIONS OF VIDEO LECTURE =================
 

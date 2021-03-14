@@ -64,13 +64,39 @@
 	<br>
 
 	<div class="section">
-		<h3>My Courses:</h3>
+		<h3>My Courses:</h3> 
 		{{#each classes}}
 			<div class="course" id="{{id}}">
 				<h4><a href="/classes/{{id}}">{{course}}</a></h4>
 				<p>{{title}}</p>
 			</div>
 		{{/each}}
+		<button onclick="togglePopup()" class="addNewClass">
+			<div class="plus">
+				<i class="fas fa-plus"></i> 
+			</div>
+			<div class="addClass">
+				<h4>Add new class</h4>
+			</div>
+			<div class="clearfix"></div>
+		</button>
+
+		<div class="popup" id="popup-1">
+  			<div class="overlay"></div>
+  			<div class="content">
+    			<div class="close-btn" onclick="togglePopup()">&times;</div>
+    			<h1>Add Class</h1>
+				<div class="classname">
+					<input type="text" id="className" placeholder="Course">
+				</div>
+				<div class="classdes">
+					<input type="text" id="classDes" placeholder="Class Title">
+				</div>
+        		<form class="addClassBtn" > <!--action="/home"-->
+            		<input type="submit" value="Add Class">
+        		</form>
+			</div>
+		</div>
 	</div>
 
 	<br>
