@@ -37,7 +37,7 @@
 
 		
 		<div class="buttons" style="margin-top: 10px;">
-			<button onclick="getCurTime()" type="button">Mark Time</button> <button>Question</button>
+			<button onclick="getCurTime()" type="button">Mark Time</button> <button onclick="getCurTimeQ()">Question</button>
 		</div>
 
 		<div class="titles">
@@ -55,6 +55,15 @@
 			<tr>
 				<th>Timestamps</th>
 				<th>Notes</th>
+			</tr>
+			<!-- filled in inside getCurTime() function-->
+		</table>
+
+		<!--table of timestamps and questions-->
+		<table id="questions-table">
+			<tr>
+				<th>Timestamps</th>
+				<th>Questions</th>
 			</tr>
 			<!-- filled in inside getCurTime() function-->
 		</table>
