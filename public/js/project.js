@@ -85,8 +85,11 @@ function onPlayerStateChange(event) {
 
 function getCurTime() {
 	//right now its an alert but it should give it to timestamps
-	var timestamp = player.playerInfo.currentTime;
-	$("#example #ts").append("<p>" + timestamp + "</p>");
+	var timestamp = Math.round(player.playerInfo.currentTime);
+	$("#example #notes-table").append("<tr> <td>" + timestamp + 
+						" sec.</td> <td> <input type='text' id='note'> </tr>");
+	/* $("#example #notes-table").append("<td>" + timestamp + "</td>");
+	$("#example #notes-table").append("<td><input type='text' id='note'> </td>"); */
 	console.log("clicked on " + timestamp);
 }
 
@@ -97,3 +100,5 @@ function setCurTime(time) {
                'startSeconds': time
 				});
 }
+
+
