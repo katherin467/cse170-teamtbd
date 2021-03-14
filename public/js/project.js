@@ -1,4 +1,4 @@
-var classes = require("../../classdata.json")['classes'];
+//var classes = require("../../classdata.json")['classes'];
 
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {

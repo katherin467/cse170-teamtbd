@@ -154,10 +154,10 @@ a.backarrow, a.logout {
 }
 .addClass {
     display: inline-block;
-}
+}/*
 button {
     margin-left: 15%;
-}
+}*/
 
 /*.clearfix {
     clear: both;
